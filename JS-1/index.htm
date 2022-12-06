@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Counter</title>
+    <meta name='viewport'
+        content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link href="" rel="stylesheet">
+</head>
+
+<body>
+
+</body>
+<script>
+    var counter = document.createElement('div');
+    counter.innerHTML =
+        '<button id="counter-increment">+</button> <button id="counter-decrement">-</button> <div id="counter-result">0</div>';
+    document.body.appendChild(counter);
+    var counterResult = document.getElementById('counter-result');
+    var counterIncrement = document.getElementById('counter-increment');
+    counterIncrement.addEventListener('click', function () {
+        counterResult.innerHTML = parseInt(counterResult.innerHTML) + 1;
+    });
+    var counterDecrement = document.getElementById('counter-decrement');
+    counterDecrement.addEventListener('click', function () {
+        counterResult.innerHTML = parseInt(counterResult.innerHTML) - 1;
+    });
+</script>
+
+</html>
